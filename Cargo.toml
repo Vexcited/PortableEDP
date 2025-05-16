@@ -1,7 +1,7 @@
 [package]
 name = "portableedp"
 version = "0.1.0"
-description = "A Tauri App"
+description = "A wrapper of Ecole Directe Plus for easy use, on mobile and desktop."
 authors = ["Mikkel ALMONTE--RINGAUD <contact@vexcited.com>"]
 edition = "2021"
 
