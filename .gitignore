@@ -1,0 +1,6 @@
+.DS_Store
+
+/dist/
+/target/
+/gen/schemas
+/node_modules/

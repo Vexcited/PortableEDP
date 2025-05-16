@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "scripts": {
+    "build:injection": "tsup",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-opener": "^2"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  }
+}
