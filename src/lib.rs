@@ -15,11 +15,7 @@ pub fn run() {
         .invoke_handler(tauri::generate_handler![])
         .setup(move |app: &mut App| {
           let mut win = WebviewWindowBuilder::new(app, "main", app_url_external)
-                .resizable(true)
                 .disable_drag_drop_handler()
-                .decorations(true)
-                .shadow(true)
-                .inner_size(1280.0, 720.0)
                 .user_agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36")
                 .initialization_script(
                     format!(
@@ -35,7 +31,12 @@ pub fn run() {
 
             #[cfg(not(any(target_os = "ios", target_os = "android")))]
             {
-                win = win.title("Ecole Directe Plus");
+                win = win
+                  .title("Ecole Directe Plus")
+                  .resizable(true)
+                  .decorations(true)
+                  .shadow(true)
+                  .inner_size(1280.0, 720.0);
             }
 
             win.build()?;
